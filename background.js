@@ -1,6 +1,6 @@
 var chucking = false;
 var numChuckImages = 6;
-var chuckAPI = 'http://api.icndb.com/jokes/random';
+var chuckAPI = 'http://api.icndb.com/jokes/random?escape=javascript';
 
 chrome.browserAction.onClicked.addListener(toggleChuck);
 function toggleChuck() {
@@ -44,7 +44,7 @@ function showNotification(message, number) {
   var notificationOptions = {
     'type':       'basic',
     'title':      'Chuck fact #' + number,
-    'message':    message.replace(/&quot;/g, '"'),
+    'message':    message,
     'iconUrl':   'images/' + Math.floor(1 + Math.random() * numChuckImages) + '.jpg',
   };
   chrome.notifications.create(String(number), notificationOptions);
