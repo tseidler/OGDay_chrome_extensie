@@ -11,9 +11,10 @@
     "default_title": "Chuck 'm"
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["quotes.js", "background.js"]
   },
   "permissions": [
-    "notifications"
+    "notifications",
+    "http://api.icndb.com/"
   ]
 }
